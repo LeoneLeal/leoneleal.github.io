@@ -24,7 +24,7 @@
       <nav class="nav">
         <a href="#top">Home</a>
         <a href="#sobre">Sobre</a>
-        <a href="#skills">Stack</a>
+        <a href="#skills">Habilidades</a>
         <a href="#projetos">Projetos</a>
         <a href="#contato">Contato</a>
       </nav>
@@ -155,7 +155,7 @@
       <section class="section" id="skills">
         <div class="section-grid">
           <div class="section-head">
-            <h2>Stack</h2>
+            <h2>Habilidades</h2>
             <p class="section-note">
               Ferramentas e linguagens que uso no dia a dia.
             </p>
@@ -238,21 +238,107 @@
                 <ul class="tags">
                   <li>JavaScript</li>
                 </ul>
-                <a
-                  class="project-link"
-                  href="https://github.com/LeoneLeal/Barato-Moveis"
-                  target="_blank"
-                  rel="noopener"
-                  >Ver no GitHub</a
-                >
+                <div class="project-link-group">
+                  <a
+                    class="project-link"
+                    href="https://leoneleal.github.io/Barato-Moveis/"
+                    target="_blank"
+                    rel="noopener"
+                    >Ver ao vivo</a
+                  >
+                  <a
+                    class="project-link project-link-secondary"
+                    href="https://github.com/LeoneLeal/Barato-Moveis"
+                    target="_blank"
+                    rel="noopener"
+                    >Ver no GitHub</a
+                  >
+                </div>
               </div>
             </article>
           </div>
         </div>
       </section>
+
+      <section class="section" id="contato">
+        <div class="section-grid">
+          <div class="section-head">
+            <span class="contact-pill">📞 Contato</span>
+            <h2>Vamos conversar</h2>
+            <p class="section-note">
+              Tem algum problema, uma ideia ou só quer dizer oi? Eu leio todas
+              as mensagens.
+            </p>
+          </div>
+          <div class="section-body contact-grid">
+            <div class="contact-card contact-profile">
+              <div class="foto contact-foto">
+                <img src="foto.jpeg" alt="Foto de Leone Batista" />
+              </div>
+              <h3>Leone Batista</h3>
+              <p class="contact-handle">@l3o.zxt</p>
+              <p class="contact-bio">
+                Desenvolvedor full stack em formação, natural da Bahia. Resposta
+                mais rápida pelo Instagram.
+              </p>
+              <a
+                class="btn btn-primary contact-social"
+                href="https://www.instagram.com/l3o.zxt/"
+                target="_blank"
+                rel="noopener"
+                >Mensagem no Instagram</a
+              >
+            </div>
+
+            <form
+              class="contact-card contact-form"
+              id="contact-form"
+              action="https://formspree.io/f/xzezvjny"
+              method="POST"
+            >
+              <div class="form-row">
+                <div class="form-field">
+                  <label for="nome">Nome</label>
+                  <input
+                    id="nome"
+                    name="nome"
+                    type="text"
+                    placeholder="Seu nome"
+                    required
+                  />
+                </div>
+                <div class="form-field">
+                  <label for="email">E-mail</label>
+                  <input
+                    id="email"
+                    name="email"
+                    type="email"
+                    placeholder="voce@exemplo.com"
+                    required
+                  />
+                </div>
+              </div>
+              <div class="form-field">
+                <label for="mensagem">Mensagem</label>
+                <textarea
+                  id="mensagem"
+                  name="mensagem"
+                  rows="5"
+                  placeholder="O que está em sua mente?"
+                  required
+                ></textarea>
+              </div>
+              <button type="submit" class="btn btn-primary">
+                Enviar mensagem
+              </button>
+              <p class="form-status" id="form-status" role="status"></p>
+            </form>
+          </div>
+        </div>
+      </section>
     </main>
 
-    <footer class="site-footer" id="contato">
+    <footer class="site-footer">
       <blockquote>
         "A única maneira de fazer um excelente trabalho é amar o que você faz."
         <cite>— Steve Jobs</cite>
