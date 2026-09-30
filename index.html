@@ -1,0 +1,432 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Leone Batista — Desenvolvedor Full Stack</title>
+    <meta
+      name="description"
+      content="Portfólio de Leone Batista, desenvolvedor full stack em formação na Bahia."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Space+Grotesk:wght@400;500;700&family=JetBrains+Mono:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <script>
+      (function () {
+        try {
+          var saved = localStorage.getItem("portfolio-theme");
+          if (saved === "light") {
+            document.documentElement.setAttribute("data-theme", "light");
+          }
+        } catch (err) {
+          /* localStorage indisponível: mantém o tema escuro padrão */
+        }
+      })();
+    </script>
+  </head>
+  <body>
+    <div id="loader" class="loader" role="status" aria-label="Carregando">
+      <div class="loader-mark">LB</div>
+      <div class="loader-bar">
+        <div class="loader-progress" id="loader-progress"></div>
+      </div>
+      <div class="loader-percent" id="loader-percent">0%</div>
+    </div>
+
+    <div class="grain"></div>
+
+    <header class="site-header">
+      <a href="#top" class="mark">LB</a>
+      <nav class="nav">
+        <a href="#top">Home</a>
+        <a href="#sobre">Sobre</a>
+        <a href="#skills">Habilidades</a>
+        <a href="#projetos">Projetos</a>
+        <a href="#contato">Contato</a>
+      </nav>
+      <button
+        type="button"
+        id="theme-toggle"
+        class="theme-toggle"
+        aria-pressed="false"
+        aria-label="Alternar tema"
+      >
+        <span class="theme-icon" aria-hidden="true">☀️</span>
+      </button>
+    </header>
+
+    <main>
+      <section class="hero" id="top">
+        <svg
+          class="constellation"
+          viewBox="0 0 900 700"
+          preserveAspectRatio="xMidYMid slice"
+          aria-hidden="true"
+        >
+          <g class="const-lines">
+            <line x1="620" y1="120" x2="720" y2="180"></line>
+            <line x1="720" y1="180" x2="700" y2="280"></line>
+            <line x1="700" y1="280" x2="780" y2="340"></line>
+            <line x1="780" y1="340" x2="740" y2="440"></line>
+            <line x1="740" y1="440" x2="820" y2="480"></line>
+            <line x1="700" y1="280" x2="610" y2="310"></line>
+            <line x1="610" y1="310" x2="560" y2="420"></line>
+            <line x1="820" y1="480" x2="860" y2="580"></line>
+          </g>
+          <g class="const-points">
+            <circle cx="620" cy="120" r="3"></circle>
+            <circle cx="720" cy="180" r="4"></circle>
+            <circle cx="700" cy="280" r="5"></circle>
+            <circle cx="780" cy="340" r="3"></circle>
+            <circle cx="740" cy="440" r="4"></circle>
+            <circle cx="820" cy="480" r="3"></circle>
+            <circle cx="610" cy="310" r="3"></circle>
+            <circle cx="560" cy="420" r="4"></circle>
+            <circle cx="860" cy="580" r="3"></circle>
+          </g>
+          <g class="dust">
+            <circle cx="200" cy="90" r="1.4"></circle>
+            <circle cx="340" cy="200" r="1.1"></circle>
+            <circle cx="120" cy="340" r="1.6"></circle>
+            <circle cx="480" cy="80" r="1.2"></circle>
+            <circle cx="260" cy="480" r="1.3"></circle>
+            <circle cx="420" cy="560" r="1.1"></circle>
+            <circle cx="90" cy="560" r="1.4"></circle>
+            <circle cx="530" cy="620" r="1.2"></circle>
+          </g>
+        </svg>
+
+        <div class="hero-content">
+          <p class="hero-kicker">Alagoinhas, Bahia</p>
+          <div class="foto">
+            <img src="foto.jpeg" alt="foto" />
+          </div>
+          <h1>Leone Batista</h1>
+          <p class="hero-role">
+            Desenvolvedor full stack em formação — backend e frontend
+          </p>
+          <p class="hero-bio">
+            Tenho 21 anos e estou cursando Tecnólogo em Análise e
+            Desenvolvimento de Sistemas na FASUL. No momento atuo com suporte
+            técnico e infraestrutura, buscando soluções práticas que tornem a
+            rotina de pessoas e equipes mais fluida.
+          </p>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="#projetos">Ver projetos</a>
+            <a
+              class="btn btn-ghost"
+              href="https://github.com/LeoneLeal"
+              target="_blank"
+              rel="noopener"
+              >GitHub</a
+            >
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="sobre">
+        <div class="section-grid">
+          <div class="section-head reveal">
+            <h2>Sobre</h2>
+          </div>
+          <div class="section-body reveal">
+            <p>
+              Sou natural da Bahia e me interessei por tecnologia pela vontade
+              de entender como as coisas são construídas por trás da tela. Hoje
+              meu foco é virar um desenvolvedor full stack — capaz de resolver
+              problemas tanto na interface quanto na estrutura física que
+              sustenta o sistema.
+            </p>
+            <p>
+              Meu objetivo de curto prazo é atuar profissionalmente como
+              desenvolvedor, contribuindo com times e projetos reais enquanto
+              sigo aprendendo. No momento, estou dedicando boa parte do estudo
+              em softwares e estrutura de redes
+            </p>
+
+            <div class="timeline">
+              <div class="timeline-item is-done reveal">
+                <span class="timeline-dot"></span>
+                <div>
+                  <p class="timeline-title">
+                    Técnico em Análise e Desenvolvimento de Sistemas - SENAI
+                  </p>
+                  <p class="timeline-meta">Concluído</p>
+                </div>
+              </div>
+              <div class="timeline-item is-active reveal">
+                <span class="timeline-dot"></span>
+                <div>
+                  <p class="timeline-title">
+                    Tecnólogo em Análise e Desenvolvimento de Sistemas — FASUL
+                  </p>
+                  <p class="timeline-meta">Em andamento</p>
+                </div>
+              </div>
+              <div class="timeline-item is-next reveal">
+                <span class="timeline-dot"></span>
+                <div>
+                  <p class="timeline-title">
+                    Aprofundando em Técnico em TI e infraestrutura de redes
+                  </p>
+                  <p class="timeline-meta">Estudo contínuo</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="skills">
+        <div class="section-grid">
+          <div class="section-head reveal">
+            <h2>Habilidades</h2>
+            <p class="section-note">
+              Ferramentas e linguagens que uso no dia a dia.
+            </p>
+          </div>
+          <div class="section-body skills-body">
+            <div class="skills-grid">
+              <div class="skill-card reveal">
+                <span class="skill-icon">&lt;/&gt;</span>
+                <h3>Frontend</h3>
+                <p>
+                  Interfaces responsivas, com HTML, CSS e React, sempre
+                  buscando boa experiência de uso.
+                </p>
+                <ul class="tags">
+                  <li>HTML</li>
+                  <li>CSS</li>
+                  <li>React.js</li>
+                </ul>
+              </div>
+
+              <div class="skill-card reveal">
+                <span class="skill-icon">◆</span>
+                <h3>Backend</h3>
+                <p>
+                  Lógica de servidor e persistência de dados com JavaScript,
+                  Node.js e MySQL.
+                </p>
+                <ul class="tags">
+                  <li>JavaScript</li>
+                  <li>Node.js</li>
+                  <li>MySQL</li>
+                </ul>
+              </div>
+
+              <div class="skill-card reveal">
+                <span class="skill-icon">✦</span>
+                <h3>Ferramentas</h3>
+                <p>
+                  Versionamento, prototipação e um fluxo de trabalho
+                  organizado do início ao fim de um projeto.
+                </p>
+                <ul class="tags">
+                  <li>Git</li>
+                  <li>GitHub</li>
+                  <li>VS Code</li>
+                  <li>Figma</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="projetos">
+        <div class="section-grid">
+          <div class="section-head reveal">
+            <h2>Projetos</h2>
+            <p class="section-note">Dois sistemas reais, feitos do zero.</p>
+          </div>
+          <div class="section-body projects">
+            <article class="project reveal">
+              <div class="project-index">CONTROLE DE ESTOQUE</div>
+              <div class="project-content">
+                <h3>Controle de Estoque</h3>
+                <p>
+                  Sistema de controle de estoque publicado e disponível para uso
+                  público — dá pra testar o cadastro e o acompanhamento de
+                  produtos direto no navegador, sem precisar instalar nada.
+                </p>
+                <ul class="tags">
+                  <li>JavaScript</li>
+                </ul>
+                <div class="project-link-group">
+                  <a
+                    class="project-link"
+                    href="https://leoneleal.github.io/ControleEstoque/"
+                    target="_blank"
+                    rel="noopener"
+                    >Ver ao vivo</a
+                  >
+                  <a
+                    class="project-link project-link-secondary"
+                    href="https://github.com/LeoneLeal/Estoque"
+                    target="_blank"
+                    rel="noopener"
+                    >Ver no GitHub</a
+                  >
+                </div>
+              </div>
+            </article>
+
+            <article class="project project-alt reveal">
+              <div class="project-index">FINANCE-FLOW</div>
+              <div class="project-content">
+                <h3>FinanceFlow</h3>
+                <p>
+                  Dashboard pessoal de controle financeiro, com cadastro de
+                  transações, categorias personalizadas e gráficos de
+                  receitas e despesas em tempo real, incluindo tema claro e
+                  escuro.
+                </p>
+                <ul class="tags">
+                  <li>JavaScript</li>
+                  <li>Chart.js</li>
+                </ul>
+                <div class="project-link-group">
+                  <a
+                    class="project-link"
+                    href="https://leoneleal.github.io/finance-flow/"
+                    target="_blank"
+                    rel="noopener"
+                    >Ver ao vivo</a
+                  >
+                  <a
+                    class="project-link project-link-secondary"
+                    href="https://github.com/LeoneLeal/finance-flow"
+                    target="_blank"
+                    rel="noopener"
+                    >Ver no GitHub</a
+                  >
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="contato">
+        <div class="section-grid">
+          <div class="section-head reveal">
+            <span class="contact-pill">⚡ Contato</span>
+            <h2>Vamos conversar</h2>
+            <p class="section-note">
+              Tem algum problema, uma ideia ou só quer dizer oi? Eu leio
+              todas as mensagens.
+            </p>
+          </div>
+          <div class="section-body contact-grid">
+            <div class="contact-card contact-profile reveal">
+              <div class="foto contact-foto">
+                <img src="foto.jpeg" alt="Foto de Leone Batista" />
+              </div>
+              <h3>Leone Batista</h3>
+              <p class="contact-handle">@l3o.zxt</p>
+              <p class="contact-bio">
+                Desenvolvedor full stack em formação, natural da Bahia.
+                Resposta mais rápida pelo Instagram.
+              </p>
+              <a
+                class="btn btn-primary contact-social"
+                href="https://www.instagram.com/l3o.zxt/"
+                target="_blank"
+                rel="noopener"
+                >Mensagem no Instagram</a
+              >
+            </div>
+
+            <form
+              class="contact-card contact-form reveal"
+              id="contact-form"
+              action="https://formspree.io/f/xzezvjny"
+              method="POST"
+            >
+              <div class="form-row">
+                <div class="form-field">
+                  <label for="nome">Nome</label>
+                  <input id="nome" name="nome" type="text" placeholder="Seu nome" required />
+                </div>
+                <div class="form-field">
+                  <label for="email">E-mail</label>
+                  <input id="email" name="email" type="email" placeholder="voce@exemplo.com" required />
+                </div>
+              </div>
+              <div class="form-field">
+                <label for="mensagem">Mensagem</label>
+                <textarea id="mensagem" name="mensagem" rows="5" placeholder="O que está em sua mente?" required></textarea>
+              </div>
+              <button type="submit" class="btn btn-primary">Enviar mensagem</button>
+              <p class="form-status" id="form-status" role="status"></p>
+            </form>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <blockquote>
+        "A única maneira de fazer um excelente trabalho é amar o que você faz."
+        <cite>— Steve Jobs</cite>
+      </blockquote>
+      <div class="footer-links social-buttons">
+        <a
+          class="social-btn social-btn--instagram"
+          href="https://www.instagram.com/l3o.zxt/"
+          target="_blank"
+          rel="noopener"
+          aria-label="Instagram"
+        >
+          <svg viewBox="0 0 24 24" fill="none" width="26" height="26" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <path
+              clip-rule="evenodd"
+              d="M3 8a5 5 0 0 1 5-5h8a5 5 0 0 1 5 5v8a5 5 0 0 1-5 5H8a5 5 0 0 1-5-5V8Zm5-3a3 3 0 0 0-3 3v8a3 3 0 0 0 3 3h8a3 3 0 0 0 3-3V8a3 3 0 0 0-3-3H8Zm7.597 2.214a1 1 0 0 1 1-1h.01a1 1 0 1 1 0 2h-.01a1 1 0 0 1-1-1ZM12 9a3 3 0 1 0 0 6 3 3 0 0 0 0-6Zm-5 3a5 5 0 1 1 10 0 5 5 0 0 1-10 0Z"
+              fill-rule="evenodd"
+              fill="currentColor"
+            ></path>
+          </svg>
+        </a>
+        <a
+          class="social-btn social-btn--github"
+          href="https://github.com/LeoneLeal"
+          target="_blank"
+          rel="noopener"
+          aria-label="GitHub"
+        >
+          <svg viewBox="0 0 24 24" fill="currentColor" width="26" height="26" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <path
+              clip-rule="evenodd"
+              d="M12.006 2a9.847 9.847 0 0 0-6.484 2.44 10.32 10.32 0 0 0-3.393 6.17 10.48 10.48 0 0 0 1.317 6.955 10.045 10.045 0 0 0 5.4 4.418c.504.095.683-.223.683-.494 0-.245-.01-1.052-.014-1.908-2.78.62-3.366-1.21-3.366-1.21a2.711 2.711 0 0 0-1.11-1.5c-.907-.637.07-.621.07-.621.317.044.62.163.885.346.266.183.487.426.647.71.135.253.318.476.538.655a2.079 2.079 0 0 0 2.37.196c.045-.52.27-1.006.635-1.37-2.219-.259-4.554-1.138-4.554-5.07a4.022 4.022 0 0 1 1.031-2.75 3.77 3.77 0 0 1 .096-2.713s.839-.275 2.749 1.05a9.26 9.26 0 0 1 5.004 0c1.906-1.325 2.74-1.05 2.74-1.05.37.858.406 1.828.101 2.713a4.017 4.017 0 0 1 1.029 2.75c0 3.939-2.339 4.805-4.564 5.058a2.471 2.471 0 0 1 .679 1.897c0 1.372-.012 2.477-.012 2.814 0 .272.18.592.687.492a10.05 10.05 0 0 0 5.388-4.421 10.473 10.473 0 0 0 1.313-6.948 10.32 10.32 0 0 0-3.39-6.165A9.847 9.847 0 0 0 12.007 2Z"
+              fill-rule="evenodd"
+            ></path>
+          </svg>
+        </a>
+        <a
+          class="social-btn social-btn--linkedin"
+          href="https://www.linkedin.com/in/leone-batista-de-souza-leal-batista-3709b0374/"
+          target="_blank"
+          rel="noopener"
+          aria-label="LinkedIn"
+        >
+          <svg viewBox="0 0 448 512" fill="currentColor" width="22" height="26" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <path
+              d="M100.28 448H7.4V148.9h92.88zm-46.44-341.7C24.09 106.3 0 82.2 0 52.6a53.6 53.6 0 0 1 107.2 0c0 29.6-24.1 53.7-53.36 53.7zM447.9 448h-92.68V302.4c0-34.7-.7-79.3-48.29-79.3-48.29 0-55.69 37.7-55.69 76.7V448h-92.78V148.9h89.08v40.8h1.3c12.4-23.5 42.69-48.29 87.88-48.29 94 0 111.28 61.9 111.28 142.3z"
+            ></path>
+          </svg>
+        </a>
+      </div>
+      <p class="footer-note">
+        © 2026 Leone Batista de Souza Leal — Bahia, Brasil
+      </p>
+    </footer>
+
+    <script src="theme.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
